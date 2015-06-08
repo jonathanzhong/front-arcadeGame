@@ -1,1 +1,21 @@
-# front-arcadeGame
+#Classic Arcade Game Clone
+![](http://progressed.io/bar/100?title=Progress)
+
+## Project Objective:
+You will be provided visual assets and a game loop engine; using these tools you must add a number of entities to the game including the player characters and enemies to recreate the classic arcade game Frogger.
+
+##What I have Done:
+- Utilized JavaScript's object oriented programming features to write "Enemy" and "Player" classes to create instances of objects.
+- Deployed a pseudoclassical pattern.
+
+##Peek:
+![Alt text](https://github.com/jonathanzhong/front-arcadeGame/blob/master/images/classicalgame.png)
+
+##Submission Review Progress:
+06/08/2015:
+- Missing semicolons in JS files
+- Better using 3 character hexadecimal notation for color
+##Copyright:
+ - Pictures:[http://www.thisiscolossal.com](http://www.thisiscolossal.com)
+ - This repository: Jonathan Zhong
+ - Mockup file: [Udacity](http://www.udacity.com)

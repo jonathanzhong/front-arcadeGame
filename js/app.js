@@ -9,7 +9,7 @@ var Enemy = function(initialX, initialY, speed) {
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
-}
+};
 
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
@@ -34,48 +34,48 @@ Enemy.prototype.update = function(dt) {
     if (player.x > bugXLeftEdge && player.x < bugXRightEdge && player.y > bugYTopEdge && player.y < bugYBottomEdge ) {
         player.collisions();
     }
-}
+};
 
 // Draw the enemy on the screen, required method for game
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-}
+};
 
 Enemy.prototype.randamSpeed = function() {
     var speedRandom = Math.floor(Math.random() * 3 + 1) * 70;
     this.speed = speedRandom;
-}
+};
 
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
-var playerX = 200;
-var playerY = 400;
+var PLAYERX = 200;
+var PLAYERY = 400;
 
-var Player = function(playerX, playerY) {
-    this.x = playerX;
-    this.y = playerY;
+var Player = function(PLAYERX, PLAYERY) {
+    this.x = PLAYERX;
+    this.y = PLAYERY;
     this.boundariesCheck = {
         leftBoundary : false,
         rightBoundary : false,
         bottomBoundary : true
     };
-    this.sprite = 'images/char-boy.png'
-}
+    this.sprite = 'images/char-boy.png';
+};
 
 Player.prototype.update = function() {
-    this.x = this.x;
-}
+   //Empty
+};
 
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-}
+};
 
 Player.prototype.collisions = function() {
-    this.x = playerX;
-    this.y = playerY;
+    this.x = PLAYERX;
+    this.y = PLAYERY;
     this.resetCheckBoundaries();
-}
+};
 
 Player.prototype.handleInput = function(event) {
     this.checkBoundaries();
@@ -108,7 +108,7 @@ Player.prototype.handleInput = function(event) {
         }
         this.x = this.x - 100;
     }
-}
+};
 
 Player.prototype.checkBoundaries = function() {
     if (this.x === 0) {
@@ -124,23 +124,23 @@ Player.prototype.checkBoundaries = function() {
     } else {
         this.boundariesCheck.bottomBoundary = false;
     }
-}
+};
 
 Player.prototype.resetCheckBoundaries = function() {
     this.setHorizontalBoundariesState(false, false);
     this.boundariesCheck.bottomBoundary = true;
-}
+};
 
 Player.prototype.setHorizontalBoundariesState = function(leftBoundaryState, rightBoundaryState) {
     this.boundariesCheck.leftBoundary = leftBoundaryState;
     this.boundariesCheck.rightBoundary = rightBoundaryState;
-}
+};
 
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
-var allEnemies = new Array();
+var allEnemies = [];
 
 //Instantiate all enemies
 for (var i = 0; i < 3; i++) {
@@ -149,7 +149,7 @@ for (var i = 0; i < 3; i++) {
 }
 
 
-var player = new Player(playerX, playerY);
+var player = new Player(PLAYERX, PLAYERY);
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
