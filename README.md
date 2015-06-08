@@ -15,7 +15,7 @@ You will be provided visual assets and a game loop engine; using these tools you
 06/08/2015:
 - Missing semicolons in JS files
 - Better using 3 character hexadecimal notation for color
+- 
 ##Copyright:
- - Pictures:[http://www.thisiscolossal.com](http://www.thisiscolossal.com)
+
  - This repository: Jonathan Zhong
- - Mockup file: [Udacity](http://www.udacity.com)
