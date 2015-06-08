@@ -12,7 +12,7 @@ You will be provided visual assets and a game loop engine; using these tools you
 
 CLICK the "index.html" file, then you are ready to play with it.
 
-This is a basic game and you are required to survive to pass across all the lanes, at the meanwhile avoiding coming enemies. There is no score board,play button and pause button so far. And you player character will be reset back the initial place when you sucess across all the lanes.
+This is a basic game and you are required to survive to pass across all the lanes, at the meanwhile avoiding coming enemies. There is no score board,play button and pause button so far. And you player character will be reset back to the initial place when you sucess across all the lanes.
 
 ##Peek:
 ![Alt text](https://github.com/jonathanzhong/front-arcadeGame/blob/master/images/classicalgame.png)
